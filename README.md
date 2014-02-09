@@ -1,1 +1,1 @@
-Future guts of [theronbpatrick.com](theronbpatrick.com)
+Future guts of [theronbpatrick.com](http://www.theronbpatrick.com)
