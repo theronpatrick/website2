@@ -1,0 +1,29 @@
+// Color variables
+$orange: #FF9A26;
+$blue: #007DB2;
+$gray: #343b3e;
+
+
+// Main styles
+
+.frame-container {
+	background-color: $orange; 
+
+	position: absolute;
+	height: 100%;
+	width: 100%;
+}
+
+.app-container {
+	position: relative;
+	height: 1000px;
+	width: 1000px;
+
+	margin: 0 auto;
+
+}
+
+.label {
+	font-family: "quicksand-regular";
+	font-size: 45px; 
+}
