@@ -34,10 +34,16 @@ body, html {
 	left: 25%;
 	top: 25%;
 
+	perspective: 100px;
+    perspective-origin: center;
+    transform: perspective(100px);
+
 }
 
 .label-container {
 	text-align: center;
+
+	transform: translate3d(0px, 0px, 0px);
 }
 
 .label {
@@ -64,4 +70,40 @@ body, html {
 	}
 	&.github {
 	}
+}
+
+.debug-zoom {
+	position: absolute;
+	top: 0px;
+	height: 200px;
+	width: 100%;
+
+	font-family: "quicksand-regular";
+	font-size: 45px;  
+
+
+	text-align: center;
+
+	background-color: rgba(255,255,0,.5);
+
+	transform: translate3d(0px, -1500px, -1500px);
+}
+
+.zoom-projects {
+	transform: translate3d(0px, 100px, 100px);
+}
+.show-zoom {
+	transform: translate3d(0px, 0px, 0px);
+}
+
+.debug-easing {
+	-webkit-transition: all 500ms cubic-bezier(0.250, 0.250, 0.750, 0.750); 
+   -moz-transition: all 500ms cubic-bezier(0.250, 0.250, 0.750, 0.750); 
+     -o-transition: all 500ms cubic-bezier(0.250, 0.250, 0.750, 0.750); 
+        transition: all 500ms cubic-bezier(0.250, 0.250, 0.750, 0.750); /* linear */
+
+-webkit-transition-timing-function: cubic-bezier(0.250, 0.250, 0.750, 0.750); 
+   -moz-transition-timing-function: cubic-bezier(0.250, 0.250, 0.750, 0.750); 
+     -o-transition-timing-function: cubic-bezier(0.250, 0.250, 0.750, 0.750); 
+        transition-timing-function: cubic-bezier(0.250, 0.250, 0.750, 0.750); /* linear */
 }

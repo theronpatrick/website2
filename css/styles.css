@@ -889,10 +889,22 @@ html {
   width: 50%;
   left: 25%;
   top: 25%;
+  -webkit-perspective: 100px;
+  -ms-perspective: 100px;
+  perspective: 100px;
+  -webkit-perspective-origin: center;
+  -ms-perspective-origin: center;
+  perspective-origin: center;
+  -webkit-transform: perspective(100px);
+  -ms-transform: perspective(100px);
+  transform: perspective(100px);
 }
 
 .label-container {
   text-align: center;
+  -webkit-transform: translate3d(0px, 0px, 0px);
+  -ms-transform: translate3d(0px, 0px, 0px);
+  transform: translate3d(0px, 0px, 0px);
 }
 
 .label {
@@ -910,4 +922,39 @@ html {
 
 .label.about {
   margin-right: 25px;
+}
+
+.debug-zoom {
+  position: absolute;
+  top: 0px;
+  height: 200px;
+  width: 100%;
+  font-family: "quicksand-regular";
+  font-size: 45px;
+  text-align: center;
+  background-color: rgba(255, 255, 0, 0.5);
+  -webkit-transform: translate3d(0px, -1500px, -1500px);
+  -ms-transform: translate3d(0px, -1500px, -1500px);
+  transform: translate3d(0px, -1500px, -1500px);
+}
+
+.zoom-projects {
+  -webkit-transform: translate3d(0px, 100px, 100px);
+  -ms-transform: translate3d(0px, 100px, 100px);
+  transform: translate3d(0px, 100px, 100px);
+}
+
+.show-zoom {
+  -webkit-transform: translate3d(0px, 0px, 0px);
+  -ms-transform: translate3d(0px, 0px, 0px);
+  transform: translate3d(0px, 0px, 0px);
+}
+
+.debug-easing {
+  -webkit-transition: all 500ms cubic-bezier(0.25, 0.25, 0.75, 0.75);
+  transition: all 500ms cubic-bezier(0.25, 0.25, 0.75, 0.75);
+  /* linear */
+  -webkit-transition-timing-function: cubic-bezier(0.25, 0.25, 0.75, 0.75);
+  transition-timing-function: cubic-bezier(0.25, 0.25, 0.75, 0.75);
+  /* linear */
 }
