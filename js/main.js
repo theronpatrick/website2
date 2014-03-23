@@ -3,20 +3,24 @@ $(document).ready(function() {
 
 	console.log("hi");
 
-	$(".label").click(function(e) {
+	// Attach click functions
 
-
+	$(".label.projects").click(function(e) {
 		$(".label-container").toggleClass("zoom-projects");
-		$(".debug-zoom").toggleClass("show-zoom");
-		
+		$(".zoom-content.projects").toggleClass("show-zoom");
+	});
+	$(".zoom-content.projects").click(function(e) {
+		$(".label-container").toggleClass("zoom-projects");
+		$(".zoom-content.projects").toggleClass("show-zoom");
 	});
 
-	$(".debug-zoom").click(function(e) {
-
-
-		$(".label-container").toggleClass("zoom-projects");
-		$(".debug-zoom").toggleClass("show-zoom");
-		
+	$(".label.about").click(function(e) {
+		$(".label-container").toggleClass("zoom-about");
+		$(".zoom-content.about").toggleClass("show-zoom");
+	});
+	$(".zoom-content.about").click(function(e) {
+		$(".label-container").toggleClass("zoom-about");
+		$(".zoom-content.about").toggleClass("show-zoom");
 	});
 
 

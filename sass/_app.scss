@@ -72,8 +72,10 @@ body, html {
 	}
 }
 
-.debug-zoom {
+.zoom-content {
 	position: absolute;
+	padding: 15px;
+
 	top: 0px;
 	height: 200px;
 	width: 100%;
@@ -81,22 +83,32 @@ body, html {
 	font-family: "quicksand-regular";
 	font-size: 45px;  
 
+	cursor: pointer;
+
 
 	text-align: center;
 
-	background-color: rgba(255,255,0,.5);
+	background-color: rgba(255,255,0,0);
+	color: rgba(0,0,0,0);
 
-	transform: translate3d(0px, -1500px, -1500px);
+	transform: translate3d(0px, -1500px, -3000px);
 }
 
+// Animation classes
+
 .zoom-projects {
-	transform: translate3d(0px, 100px, 100px);
+	transform: translate3d(0px, 130px, 100px);
+}
+.zoom-about {
+	transform: translate3d(115px, 50px, 100px);
 }
 .show-zoom {
 	transform: translate3d(0px, 0px, 0px);
+	color: $blue;
+	background-color: $gray;
 }
 
-.debug-easing {
+.easing {
 	-webkit-transition: all 500ms cubic-bezier(0.250, 0.250, 0.750, 0.750); 
    -moz-transition: all 500ms cubic-bezier(0.250, 0.250, 0.750, 0.750); 
      -o-transition: all 500ms cubic-bezier(0.250, 0.250, 0.750, 0.750); 
