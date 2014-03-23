@@ -6,12 +6,16 @@ $gray: #343b3e;
 
 // Main styles
 
+body, html {
+  height: 100%;
+}
+
 .frame-container {
 
 
 	background-color: $orange; 
 
-	position: absolute;
+	position: relative;
 	height: 100%;
 	width: 100%;
 
@@ -19,58 +23,36 @@ $gray: #343b3e;
 }
 
 .app-container {
-	position: relative;
-	height: 100%;
-	width: 100%;
+	position: absolute;
 
-	perspective: 500px;
-    perspective-origin: center;
-    //transform: perspective(500px);
+	// Debug
+	background-color: rgba(111,121,222,.2);
 
+	height: 50%;
+	width: 50%;
 
-
-	margin: 0 auto;
-
-
-	text-align: center;
+	left: 25%;
+	top: 25%;
 
 }
 
 .label-container {
-
-	 transform: translate3d(0, 0, 0px);
-
-	 &.zoom-projects {
-	 	transform: translate3d(0, 50px, 200px);
-	 }
-
-}
-
-// For perspective
-.debug {
-	position: absolute;
-	top: 20%;
-	left: 50%;
-	height: 15px;
-	width: 15px;	
-
-	background-color: red;
+	text-align: center;
 }
 
 .label {
 	font-family: "quicksand-regular";
 	font-size: 45px;  
-	
+
 	display: inline-block;
 
 	color: $blue;
 	cursor: pointer;
-	
+
 	margin-bottom: 20px;
 
 	&.projects {
 		// Debug
-		margin-top: 10%;
 	}
 
 	&.inline {
@@ -81,80 +63,5 @@ $gray: #343b3e;
 		margin-right: 25px;
 	}
 	&.github {
-		margin-left: 25px;
 	}
-}
-
-.center-image-container {
-	display: inline-block;
-}
-
-// Zoom in containers
-.zoom-container {
-	width: auto;
-	height: auto;
-
-	font-family: "quicksand-regular";
-	font-size: 45px;  
-
-	position: relative;
-
-	//debug
-
-	background-color: $blue;
-
-	color: $gray;
-
-	transform: scale(.1);
-
-}
-
-.block {
-	&.top {
-
-	  margin-top: 0px;
-
-		&.shift-top {
-			//margin-top: 250px;
-		}
-	}
-}
-
-// Animations
-.easing {
--webkit-transition: all 650ms cubic-bezier(0.830, 0.165, 0.895, 0.165); 
-	   -moz-transition: all 650ms cubic-bezier(0.830, 0.165, 0.895, 0.165); 
-	     -o-transition: all 650ms cubic-bezier(0.830, 0.165, 0.895, 0.165); 
-	        transition: all 650ms cubic-bezier(0.830, 0.165, 0.895, 0.165); /* custom */
-
-	-webkit-transition-timing-function: cubic-bezier(0.830, 0.165, 0.895, 0.165); 
-	   -moz-transition-timing-function: cubic-bezier(0.830, 0.165, 0.895, 0.165); 
-	     -o-transition-timing-function: cubic-bezier(0.830, 0.165, 0.895, 0.165); 
-	        transition-timing-function: cubic-bezier(0.830, 0.165, 0.895, 0.165); /* custom */
-}
-.show {
-	transform: scale(1);
-}
-
-.zoom-in {
-	transform: translate3d(22px, 0, 500px);
-}
-
-.zoom-projects {
-	perspective-origin: 100px 100px;
-}
-
-
-// Mobile styles
-@media (max-width: 500px) { 
-
-	.label {
-		&.about {
-			margin: 0px;
-		}
-		&.github {
-			margin: 0px;
-		}
-	}
-
 }
