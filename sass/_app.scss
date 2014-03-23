@@ -7,6 +7,8 @@ $gray: #343b3e;
 // Main styles
 
 .frame-container {
+
+
 	background-color: $orange; 
 
 	position: absolute;
@@ -14,17 +16,6 @@ $gray: #343b3e;
 	width: 100%;
 
 	overflow: hidden;
-
-	// Easing
-	-webkit-transition: all 650ms cubic-bezier(0.830, 0.165, 0.895, 0.165); 
-	   -moz-transition: all 650ms cubic-bezier(0.830, 0.165, 0.895, 0.165); 
-	     -o-transition: all 650ms cubic-bezier(0.830, 0.165, 0.895, 0.165); 
-	        transition: all 650ms cubic-bezier(0.830, 0.165, 0.895, 0.165); /* custom */
-
-	-webkit-transition-timing-function: cubic-bezier(0.830, 0.165, 0.895, 0.165); 
-	   -moz-transition-timing-function: cubic-bezier(0.830, 0.165, 0.895, 0.165); 
-	     -o-transition-timing-function: cubic-bezier(0.830, 0.165, 0.895, 0.165); 
-	        transition-timing-function: cubic-bezier(0.830, 0.165, 0.895, 0.165); /* custom */
 }
 
 .app-container {
@@ -32,31 +23,55 @@ $gray: #343b3e;
 	height: 100%;
 	width: 100%;
 
+	perspective: 500px;
+    perspective-origin: center;
+    //transform: perspective(500px);
+
+
+
 	margin: 0 auto;
+
 
 	text-align: center;
 
-	// Easing
-	-webkit-transition: all 650ms cubic-bezier(0.830, 0.165, 0.895, 0.165); 
-	   -moz-transition: all 650ms cubic-bezier(0.830, 0.165, 0.895, 0.165); 
-	     -o-transition: all 650ms cubic-bezier(0.830, 0.165, 0.895, 0.165); 
-	        transition: all 650ms cubic-bezier(0.830, 0.165, 0.895, 0.165); /* custom */
+}
 
-	-webkit-transition-timing-function: cubic-bezier(0.830, 0.165, 0.895, 0.165); 
-	   -moz-transition-timing-function: cubic-bezier(0.830, 0.165, 0.895, 0.165); 
-	     -o-transition-timing-function: cubic-bezier(0.830, 0.165, 0.895, 0.165); 
-	        transition-timing-function: cubic-bezier(0.830, 0.165, 0.895, 0.165); /* custom */
+.label-container {
 
+	 transform: translate3d(0, 0, 0px);
+
+	 &.zoom-projects {
+	 	transform: translate3d(0, 50px, 200px);
+	 }
+
+}
+
+// For perspective
+.debug {
+	position: absolute;
+	top: 20%;
+	left: 50%;
+	height: 15px;
+	width: 15px;	
+
+	background-color: red;
 }
 
 .label {
 	font-family: "quicksand-regular";
 	font-size: 45px;  
+	
+	display: inline-block;
 
 	color: $blue;
 	cursor: pointer;
 	
 	margin-bottom: 20px;
+
+	&.projects {
+		// Debug
+		margin-top: 10%;
+	}
 
 	&.inline {
 		display: inline-block;
@@ -82,18 +97,32 @@ $gray: #343b3e;
 	font-family: "quicksand-regular";
 	font-size: 45px;  
 
-	position: absolute;
+	position: relative;
 
 	//debug
-	top: 150px;
-	left: 25%;
 
 	background-color: $blue;
 
 	color: $gray;
 
-	// Easing
-	-webkit-transition: all 650ms cubic-bezier(0.830, 0.165, 0.895, 0.165); 
+	transform: scale(.1);
+
+}
+
+.block {
+	&.top {
+
+	  margin-top: 0px;
+
+		&.shift-top {
+			//margin-top: 250px;
+		}
+	}
+}
+
+// Animations
+.easing {
+-webkit-transition: all 650ms cubic-bezier(0.830, 0.165, 0.895, 0.165); 
 	   -moz-transition: all 650ms cubic-bezier(0.830, 0.165, 0.895, 0.165); 
 	     -o-transition: all 650ms cubic-bezier(0.830, 0.165, 0.895, 0.165); 
 	        transition: all 650ms cubic-bezier(0.830, 0.165, 0.895, 0.165); /* custom */
@@ -102,38 +131,17 @@ $gray: #343b3e;
 	   -moz-transition-timing-function: cubic-bezier(0.830, 0.165, 0.895, 0.165); 
 	     -o-transition-timing-function: cubic-bezier(0.830, 0.165, 0.895, 0.165); 
 	        transition-timing-function: cubic-bezier(0.830, 0.165, 0.895, 0.165); /* custom */
-
-	transform: scale(0);
 }
-
-.block {
-	&.top {
-		// Easing
-		-webkit-transition: all 650ms cubic-bezier(0.830, 0.165, 0.895, 0.165); 
-		   -moz-transition: all 650ms cubic-bezier(0.830, 0.165, 0.895, 0.165); 
-		     -o-transition: all 650ms cubic-bezier(0.830, 0.165, 0.895, 0.165); 
-		        transition: all 650ms cubic-bezier(0.830, 0.165, 0.895, 0.165); /* custom */
-
-		-webkit-transition-timing-function: cubic-bezier(0.830, 0.165, 0.895, 0.165); 
-		   -moz-transition-timing-function: cubic-bezier(0.830, 0.165, 0.895, 0.165); 
-		     -o-transition-timing-function: cubic-bezier(0.830, 0.165, 0.895, 0.165); 
-		        transition-timing-function: cubic-bezier(0.830, 0.165, 0.895, 0.165); /* custom */
-
-	  margin-top: 0px;
-
-		&.shift-top {
-			margin-top: 250px;
-		}
-	}
-}
-
-// Animations
 .show {
 	transform: scale(1);
 }
 
 .zoom-in {
-	transform: scale(10);
+	transform: translate3d(22px, 0, 500px);
+}
+
+.zoom-projects {
+	perspective-origin: 100px 100px;
 }
 
 

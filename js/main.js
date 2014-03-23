@@ -3,24 +3,12 @@ $(document).ready(function() {
 
 	console.log("hi");
 
-	$(".projects").click(function() {
-		if ($(".app-container").hasClass("zoom-in")) {
-			$(".app-container").removeClass("zoom-in");
-		} else {
-			$(".app-container").addClass("zoom-in");
-		}
+	$(".label").click(function(e) {
 
-		if ($(".zoom-container").hasClass("show")) {
-			$(".zoom-container").removeClass("show");
-		} else {
-			$(".zoom-container").addClass("show");
-		}
 
-		if ($(".block.top").hasClass("shift-top")) {
-			$(".block.top").removeClass("shift-top");
-		} else {
-			$(".block.top").addClass("shift-top");
-		}
+		$(".label-container").toggleClass("zoom-projects");
+		$(".zoom-container").toggleClass("show");
+		
 	});
 
 	$(".zoom-container").click(function() {
@@ -41,6 +29,8 @@ $(document).ready(function() {
 		} else {
 			$(".block.top").addClass("shift-top");
 		}
+
+		$(".frame-container").removeClass("zoom-projects");
 	});
 
 
