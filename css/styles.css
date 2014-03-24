@@ -941,6 +941,17 @@ html {
   transform: translate3d(0px, -1500px, -3000px);
 }
 
+.image-container {
+  display: inline-block;
+}
+
+.main-image {
+  height: 160px;
+  width: 160px;
+  border-radius: 100px;
+  margin-right: 15px;
+}
+
 .zoom-projects {
   -webkit-transform: translate3d(0px, 130px, 100px);
   -ms-transform: translate3d(0px, 130px, 100px);
@@ -948,9 +959,9 @@ html {
 }
 
 .zoom-about {
-  -webkit-transform: translate3d(115px, 50px, 100px);
-  -ms-transform: translate3d(115px, 50px, 100px);
-  transform: translate3d(115px, 50px, 100px);
+  -webkit-transform: translate3d(145px, 0px, 100px);
+  -ms-transform: translate3d(145px, 0px, 100px);
+  transform: translate3d(145px, 0px, 100px);
 }
 
 .show-zoom {
