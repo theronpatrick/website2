@@ -879,7 +879,7 @@ html {
   position: relative;
   height: 100%;
   width: 100%;
-  overflow: hidden;
+  overflow-y: scroll;
 }
 
 .app-container {
@@ -952,6 +952,7 @@ html {
 .main-image {
   height: 160px;
   width: 160px;
+  cursor: pointer;
   border-radius: 100px;
   margin-right: 15px;
 }
@@ -963,15 +964,27 @@ html {
 }
 
 .zoom-about {
-  -webkit-transform: translate3d(25%, 10%, 100px);
-  -ms-transform: translate3d(25%, 10%, 100px);
-  transform: translate3d(25%, 10%, 100px);
+  -webkit-transform: translate3d(25%, 0px, 100px);
+  -ms-transform: translate3d(25%, 0px, 100px);
+  transform: translate3d(25%, 0px, 100px);
 }
 
 .zoom-contact {
   -webkit-transform: translate3d(0px, -50%, 100px);
   -ms-transform: translate3d(0px, -50%, 100px);
   transform: translate3d(0px, -50%, 100px);
+}
+
+.zoom-github {
+  -webkit-transform: translate3d(-25%, 0px, 100px);
+  -ms-transform: translate3d(-25%, 0px, 100px);
+  transform: translate3d(-25%, 0px, 100px);
+}
+
+.zoom-picture {
+  -webkit-transform: translate3d(0px, 0px, 100px);
+  -ms-transform: translate3d(0px, 0px, 100px);
+  transform: translate3d(0px, 0px, 100px);
 }
 
 .show-zoom {
@@ -989,4 +1002,18 @@ html {
   -webkit-transition-timing-function: cubic-bezier(0.25, 0.25, 0.75, 0.75);
   transition-timing-function: cubic-bezier(0.25, 0.25, 0.75, 0.75);
   /* linear */
+}
+
+@media (max-width: 1000px) {
+  .app-container {
+    top: 10%;
+  }
+
+  .label {
+    display: block;
+  }
+
+  .image-container {
+    display: block;
+  }
 }

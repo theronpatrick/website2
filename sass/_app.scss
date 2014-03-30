@@ -19,7 +19,7 @@ body, html {
 	height: 100%;
 	width: 100%;
 
-	overflow: hidden;
+	overflow-y: scroll;
 }
 
 .app-container {
@@ -109,6 +109,8 @@ body, html {
 	height: 160px;
 	width: 160px;
 
+	cursor: pointer;
+
 	border-radius: 100px;
 
 	margin-right: 15px;
@@ -120,11 +122,18 @@ body, html {
 	transform: translate3d(0px, 50%, 100px);
 }
 .zoom-about {
-	transform: translate3d(25%, 10%, 100px);
+	transform: translate3d(25%, 0px, 100px);
 }
 .zoom-contact {
 	transform: translate3d(0px, -50%, 100px);
 }
+.zoom-github {
+	transform: translate3d(-25%, 0px, 100px);
+}
+.zoom-picture {
+	transform: translate3d(0px, 0px, 100px);
+}
+
 
 
 .show-zoom {
@@ -143,4 +152,21 @@ body, html {
    -moz-transition-timing-function: cubic-bezier(0.250, 0.250, 0.750, 0.750); 
      -o-transition-timing-function: cubic-bezier(0.250, 0.250, 0.750, 0.750); 
         transition-timing-function: cubic-bezier(0.250, 0.250, 0.750, 0.750); /* linear */
+}
+
+
+// Responsive
+@media (max-width: 1000px) { 
+
+	.app-container {
+		top: 10%;
+	}
+
+	.label {
+		display: block;
+	}
+
+	.image-container {
+		display: block;
+	}
 }
