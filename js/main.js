@@ -23,6 +23,15 @@ $(document).ready(function() {
 		$(".zoom-content.about").toggleClass("show-zoom");
 	});
 
+	$(".label.contact").click(function(e) {
+		$(".label-container").toggleClass("zoom-contact");
+		$(".zoom-content.contact").toggleClass("show-zoom");
+	});
+	$(".zoom-content.contact").click(function(e) {
+		$(".label-container").toggleClass("zoom-contact");
+		$(".zoom-content.contact").toggleClass("show-zoom");
+	});
+
 
 
 

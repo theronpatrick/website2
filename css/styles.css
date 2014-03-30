@@ -902,6 +902,10 @@ html {
 
 .label-container {
   text-align: center;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
   -webkit-transform: translate3d(0px, 0px, 0px);
   -ms-transform: translate3d(0px, 0px, 0px);
   transform: translate3d(0px, 0px, 0px);
@@ -953,15 +957,21 @@ html {
 }
 
 .zoom-projects {
-  -webkit-transform: translate3d(0px, 130px, 100px);
-  -ms-transform: translate3d(0px, 130px, 100px);
-  transform: translate3d(0px, 130px, 100px);
+  -webkit-transform: translate3d(0px, 50%, 100px);
+  -ms-transform: translate3d(0px, 50%, 100px);
+  transform: translate3d(0px, 50%, 100px);
 }
 
 .zoom-about {
-  -webkit-transform: translate3d(145px, 0px, 100px);
-  -ms-transform: translate3d(145px, 0px, 100px);
-  transform: translate3d(145px, 0px, 100px);
+  -webkit-transform: translate3d(25%, 10%, 100px);
+  -ms-transform: translate3d(25%, 10%, 100px);
+  transform: translate3d(25%, 10%, 100px);
+}
+
+.zoom-contact {
+  -webkit-transform: translate3d(0px, -50%, 100px);
+  -ms-transform: translate3d(0px, -50%, 100px);
+  transform: translate3d(0px, -50%, 100px);
 }
 
 .show-zoom {
