@@ -10,6 +10,11 @@ body, html {
   height: 100%;
 }
 
+// Prevent selection of most things
+.unselectable {
+	user-select: none;
+}
+
 .frame-container {
 
 
@@ -26,7 +31,7 @@ body, html {
 	position: absolute;
 
 	// Debug
-	background-color: rgba(111,121,222,.2);
+	// background-color: rgba(111,121,222,.2);
 
 	height: 50%;
 	width: 50%;
@@ -84,6 +89,8 @@ body, html {
 	padding: 15px;
 
 	top: 0px;
+	left: 0px;
+
 	height: 200px;
 	width: 100%;
 
@@ -99,6 +106,9 @@ body, html {
 	color: rgba(0,0,0,0);
 
 	transform: translate3d(0px, -1500px, -3000px);
+
+	// TODO: Make animation appear to be coming out of label
+
 }
 
 .image-container {
@@ -140,6 +150,11 @@ body, html {
 	transform: translate3d(0px, 0px, 0px);
 	color: $blue;
 	background-color: $gray;
+
+	top: 0px;
+	left: 0px;
+
+
 }
 
 .easing {

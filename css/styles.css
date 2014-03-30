@@ -874,6 +874,13 @@ html {
   height: 100%;
 }
 
+.unselectable {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
 .frame-container {
   background-color: #ff9a26;
   position: relative;
@@ -884,7 +891,6 @@ html {
 
 .app-container {
   position: absolute;
-  background-color: rgba(111, 121, 222, 0.2);
   height: 50%;
   width: 50%;
   left: 25%;
@@ -932,6 +938,7 @@ html {
   position: absolute;
   padding: 15px;
   top: 0px;
+  left: 0px;
   height: 200px;
   width: 100%;
   font-family: "quicksand-regular";
@@ -993,6 +1000,8 @@ html {
   transform: translate3d(0px, 0px, 0px);
   color: #007db2;
   background-color: #343b3e;
+  top: 0px;
+  left: 0px;
 }
 
 .easing {
